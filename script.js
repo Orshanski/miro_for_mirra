@@ -2,11 +2,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const canvas = document.getElementById('canvas');
     let posX = 0, posY = 0, scale = 1;
     const container = document.getElementById('canvas-container');
-    const modal = document.getElementById("modal"); // Кэширование модального окна
-    const modalImg = document.getElementById("modal-img"); // Кэширование изображения в модальном окне
+    const modal = document.getElementById("modal"); 
+    const modalImg = document.getElementById("modal-img"); 
 
     drawArrows();
-    attachModalEventListeners(); // Вызов функции для добавления обработчика событий модального окна
+    attachModalEventListeners();
 
     function dragStart(e) {
         e.preventDefault();
@@ -33,6 +33,15 @@ document.addEventListener('DOMContentLoaded', function () {
         const zoomIntensity = 0.05;
         const wheelDelta = e.deltaY < 0 ? 1 : -1;
         const zoomFactor = Math.exp(wheelDelta * zoomIntensity);
+
+        const rect = container.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        // Корректировка позиции для масштабирования относительно позиции курсора
+        posX -= (x - posX) * (zoomFactor - 1);
+        posY -= (y - posY) * (zoomFactor - 1);
+
         scale *= zoomFactor;
         updateCanvas();
     }
@@ -54,10 +63,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function navigateToContainer(targetId) {
         const target = document.getElementById(`container-${targetId}`);
-        const viewportWidth = window.innerWidth;
-        const viewportHeight = window.innerHeight;
-        posX = -target.offsetLeft * scale + viewportWidth / 2 - target.offsetWidth / 2 * scale;
-        posY = -target.offsetTop * scale + viewportHeight / 2 - target.offsetHeight / 2 * scale;
+        // Расчёт центра целевого элемента с учётом текущего масштаба
+        const rect = target.getBoundingClientRect();
+        const centerX = (rect.left + rect.right) / 2;
+        const centerY = (rect.top + rect.bottom) / 2;
+
+        const containerRect = container.getBoundingClientRect();
+        const containerCenterX = (containerRect.left + containerRect.right) / 2;
+        const containerCenterY = (containerRect.top + containerRect.bottom) / 2;
+
+        posX += containerCenterX - centerX;
+        posY += containerCenterY - centerY;
+
         updateCanvas();
     }
 
@@ -114,11 +131,11 @@ function drawArrow(sourceId, targetId, sourceRect, targetRect, svg, arrows) {
     arrow.setAttribute('data-target', targetId);
 
     svg.appendChild(arrow);
-    arrows.push({sourceId, arrow}); // Добавляем стрелку и источник в массив для последующей обработки наведения
+    arrows.push({ sourceId, arrow }); // Добавляем стрелку и источник в массив для последующей обработки наведения
 }
 
 function setupArrowHoverEffect(arrows) {
-    arrows.forEach(({sourceId, arrow}) => {
+    arrows.forEach(({ sourceId, arrow }) => {
         const source = document.getElementById(sourceId);
         source.addEventListener('mouseenter', () => {
             arrow.setAttribute('stroke', 'red');
