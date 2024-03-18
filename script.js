@@ -120,7 +120,14 @@ function drawArrow(sourceId, targetId, sourceRect, targetRect, svg, arrows) {
 function setupArrowHoverEffect(arrows) {
     arrows.forEach(({sourceId, arrow}) => {
         const source = document.getElementById(sourceId);
-        source.addEventListener('mouseenter', () => arrow.setAttribute('stroke', 'red'));
-        source.addEventListener('mouseleave', () => arrow.setAttribute('stroke', 'black'));
+        source.addEventListener('mouseenter', () => {
+            arrow.setAttribute('stroke', 'red');
+            arrow.setAttribute('stroke-width', '3');
+            arrow.parentNode.appendChild(arrow);
+        });
+        source.addEventListener('mouseleave', () => {
+            arrow.setAttribute('stroke', 'black')
+            arrow.setAttribute('stroke-width', '1');
+        });
     });
 }
