@@ -24,14 +24,6 @@
     border-radius: 20px;
 }
 
-
-#container-1 { top: 20px; left: 20px; }
-#container-2 { top: 800px; left: 20px; }
-#container-3 { top: 450px; left: 700px; }
-#container-4 { top: 40px; left: 800px; }
-#container-5 { top: 900px; left: 700px; }
-#container-6 { top: 800px; left: 2000px; }
-
 .navigate {
     display: inline-block;
     cursor: pointer;
@@ -45,6 +37,19 @@
     color: gray;
     font-size: large;
     top: -10px;
+}
+
+.notes
+{
+    font-size: smaller;
+    background-color: bisque;
+    font-style: italic;
+}
+
+.minds {
+    font-size: smaller;
+    background-color: lightgreen;
+    font-style: italic;
 }
 
 .clickable-word {
@@ -73,3 +78,10 @@
     max-width: 80vw; /* Maximum width of the image */
     max-height: 80vh; /* Maximum height of the image */
   }
+
+#container-1 { top: 20px; left: 20px; }
+#container-2 { top: 800px; left: 20px; }
+#container-3 { top: 450px; left: 700px; }
+#container-4 { top: 240px; left: 800px; }
+#container-5 { top: 900px; left: 700px; }
+#container-6 { top: 1300px; left: 800px; }
