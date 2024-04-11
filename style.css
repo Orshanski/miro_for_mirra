@@ -3,54 +3,69 @@
     width: 100vw;
     height: 100vh;
     cursor: grab;
+    background-color: #efecec;
 }
+
 
 #canvas {
     width: 300%;
     height: 300%;
     transform-origin: top left;
+}    
+
+h3  {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    font-weight: bold;
+    color: lightgray;
+
 }
 
 .container-box {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     width: 500px;
+    line-height: 120%;
     font-size: small;
     height: auto;
     position: absolute;
-    background-color: #f8f9fa;
+    background-color: white;
     border: 1px solid #dee2e6;
-    padding: 20px;
-    padding-left: 50px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    border-radius: 20px;
-}
-
-.navigate {
-    display: inline-block;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.emfasize {
-    position: relative;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: bold;
-    color: gray;
-    font-size: large;
-    top: -10px;
+    padding: 50px;
+    /*padding-left: 50px;*/
+    /*box-shadow: 0 2px 5px rgba(0,0,0,0.2);*/
+    /*border-radius: 20px;*/
 }
 
 .notes
 {
     font-size: smaller;
     background-color: bisque;
-    font-style: italic;
+    padding: 30px;
+    /*font-style: italic;*/ 
 }
 
 .minds {
     font-size: smaller;
     background-color: lightgreen;
-    font-style: italic;
+    /*font-style: italic;*/
 }
+
+.navigate {
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: red;
+}
+
+/*.emfasize {
+    position: relative;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    color: gray;
+    font-size: large;
+    top: -10px;
+}*/
+
 
 .clickable-word {
     cursor: pointer;
