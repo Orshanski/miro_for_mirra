@@ -13,18 +13,17 @@
     transform-origin: top left;
 }    
 
-h3  {
+h1  {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: large;
     font-weight: bold;
     color: lightgray;
 
 }
 
 .container-box {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Georgia, Cambria, Cochin, Times, 'Times New Roman', serif;
     width: 500px;
-    line-height: 120%;
+    line-height: 135%;
     font-size: small;
     height: auto;
     position: absolute;
@@ -40,7 +39,7 @@ h3  {
 {
     font-size: smaller;
     background-color: bisque;
-    padding: 30px;
+    padding: 30;
     /*font-style: italic;*/ 
 }
 
@@ -95,8 +94,9 @@ h3  {
   }
 
 #container-1 { top: 20px; left: 20px; }
-#container-2 { top: 800px; left: 20px; }
-#container-3 { top: 450px; left: 700px; }
+#container-2 { top: 1000px; left: 20px; }
+#container-3 { top: 450px; left: 800px; }
 #container-4 { top: 240px; left: 800px; }
-#container-5 { top: 900px; left: 700px; }
-#container-6 { top: 1300px; left: 800px; }
+#container-5 { top: 1000px; left: 700px; }
+#container-6 { top: 1400px; left: 900px; }
+#container-7 { top: 20px; left: 1200px; }
