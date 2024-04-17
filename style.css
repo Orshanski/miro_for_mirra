@@ -14,9 +14,9 @@
 }    
 
 h1  {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: bold;
-    color: lightgray;
+    font-family: Georgia, Cambria, Cochin, Times, 'Times New Roman', serif;
+    font-weight: medium;
+    color: gray;
 
 }
 
@@ -38,14 +38,14 @@ h1  {
 .notes
 {
     font-size: smaller;
-    background-color: bisque;
+    background-color: rgb(255, 255, 255);
     padding: 30;
     /*font-style: italic;*/ 
 }
 
 .minds {
     font-size: smaller;
-    background-color: lightgreen;
+    background-color: rgb(255, 255, 255);
     /*font-style: italic;*/
 }
 
@@ -68,7 +68,7 @@ h1  {
 
 .clickable-word {
     cursor: pointer;
-    color: lightskyblue;
+    color: rgb(191, 191, 191);
     text-decoration: none;
   }
   
@@ -98,5 +98,14 @@ h1  {
 #container-3 { top: 450px; left: 800px; }
 #container-4 { top: 240px; left: 800px; }
 #container-5 { top: 1000px; left: 700px; }
-#container-6 { top: 1400px; left: 900px; }
-#container-7 { top: 20px; left: 1200px; }
+#container-6 { top: 1500px; left: 900px; }
+#container-7 { 
+    top: 20px; 
+    left: 1200px;
+    background-color: aqua;
+
+}
+#container-8 { top: 1200px; left: 1500px; }
+#container-9 { top: 400px; left: 1400px; }
+#container-10 { top: 400px; left: 2100px; }
+#container-11 { top: 900px; left: 1800px; }
