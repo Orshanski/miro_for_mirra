@@ -3,7 +3,7 @@
     width: 100vw;
     height: 100vh;
     cursor: grab;
-    background-color: #efecec;
+    background-color: #858585;
 }
 
 
@@ -15,9 +15,10 @@
 
 h1  {
     font-family: Georgia, Cambria, Cochin, Times, 'Times New Roman', serif;
-    font-weight: medium;
-    color: gray;
-    line-height: 100%
+    font-weight: medium ;
+    font-size: 14pt;
+    color: rgb(0, 0, 0);
+    line-height: 90%
 
 }
 
@@ -31,7 +32,7 @@ h1  {
     background-color: white;
     border: 1px solid #dee2e6;
     /*padding: 90px;*/
-    padding-left: 90px;
+    padding-left: 40px;
     padding-right: 70px;
     padding-top: 30px;
     padding-bottom: 30px;
