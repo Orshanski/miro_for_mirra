@@ -139,12 +139,12 @@ function setupArrowHoverEffect(arrows) {
         const source = document.getElementById(sourceId);
         source.addEventListener('mouseenter', () => {
             arrow.setAttribute('stroke', 'red');
-            arrow.setAttribute('stroke-width', '2');
+            arrow.setAttribute('stroke-width', '1');
             arrow.parentNode.appendChild(arrow);
         });
         source.addEventListener('mouseleave', () => {
             arrow.setAttribute('stroke', 'white')
-            arrow.setAttribute('stroke-width', '2');
+            arrow.setAttribute('stroke-width', '1');
         });
     });
 }
