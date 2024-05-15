@@ -125,7 +125,7 @@ function drawArrow(sourceId, targetId, sourceRect, targetRect, svg, arrows) {
     arrow.setAttribute('x2', x2);
     arrow.setAttribute('y2', y2);
     arrow.setAttribute('stroke', 'white');
-    arrow.setAttribute('stroke-width', '2');
+    arrow.setAttribute('stroke-width', '1');
     arrow.setAttribute('marker-end', 'url(#arrowhead)');
     arrow.setAttribute('data-source', sourceId);
     arrow.setAttribute('data-target', targetId);
@@ -139,12 +139,12 @@ function setupArrowHoverEffect(arrows) {
         const source = document.getElementById(sourceId);
         source.addEventListener('mouseenter', () => {
             arrow.setAttribute('stroke', 'red');
-            arrow.setAttribute('stroke-width', '2');
+            arrow.setAttribute('stroke-width', '1');
             arrow.parentNode.appendChild(arrow);
         });
         source.addEventListener('mouseleave', () => {
             arrow.setAttribute('stroke', 'white')
-            arrow.setAttribute('stroke-width', '2');
+            arrow.setAttribute('stroke-width', '1');
         });
     });
 }
