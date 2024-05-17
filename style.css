@@ -3,9 +3,8 @@
     width: 100vw;
     height: 100vh;
     cursor: grab;
-    background-color: #858585;
+    background-color: darkgray
 }
-
 
 #canvas {
     width: 300%;
@@ -36,7 +35,9 @@ h1  {
     padding-right: 70px;
     padding-top: 30px;
     padding-bottom: 30px;
-    box-shadow: 20 20px 20px rgba(0,0,0,0.2);
+    box-shadow: 20px 20px 20px gray;
+    text-justify: inter-word;
+    hyphens: auto;
     /*border-radius: 20px;*/
 }
 
@@ -74,7 +75,7 @@ h1  {
 
 .clickable-word {
     cursor: pointer;
-    color: rgb(0, 0, 0);
+    color: black;
     text-decoration: underline;
   }
   
