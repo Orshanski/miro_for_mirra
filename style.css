@@ -74,8 +74,8 @@ h1  {
 
 .clickable-word {
     cursor: pointer;
-    color: rgb(191, 191, 191);
-    text-decoration: none;
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
   }
   
   /* Styles for the modal window */
@@ -97,7 +97,7 @@ h1  {
   #modal-img {
     max-width: 80vw; /* Maximum width of the image */
     max-height: 80vh; /* Maximum height of the image */
-    border: 2px solid #2a2a2a;
+    border: 2px solid #858585;
   }
 
 #container-1 { top: 20px; left: 20px; }
